@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f0f2f5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+button {
+  margin: 5px 5px 0 0;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+/* 🌸 General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1 { text-align: center; margin: 25px 0 30px; font-size: 2rem; color: #060404; }
+
+/* Navbar */
+.nav-link { transition: color 0.2s ease; }
+.nav-link:hover { color: #a00 !important; }
+
+/* Theme Toggle Button */
+.mode-toggle { cursor: pointer; border: none; background: transparent; font-size: 1.8rem; transition: transform 0.4s ease, color 0.3s ease; }
+.mode-toggle:hover { transform: rotate(25deg) scale(1.1); }
+.bi-moon { color: #5dade2; text-shadow: 0 0 6px #5dade2; }
+.bi-sun { color: #f7c948; text-shadow: 0 0 8px #f1c40f; }
+
+/* Filter & Form Containers */
+#filter-container, #form-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+  margin-bottom: 25px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+input, select, #form-container button {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: #000;
+}
+
+input:focus, select:focus { border-color: #007bff; box-shadow: 0 0 4px rgba(0,123,255,0.3); }
+#form-container button { cursor: pointer; border: none; background-color: #007bff; color: white; }
+#form-container button:hover { background-color: #0056b3; }
+
+/* Student Cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+.student-card {
+  background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px; transition: transform 0.2s ease, background-color 0.4s ease, color 0.4s ease;
+}
+.student-card:hover { transform: scale(1.03); }
+.student-card h3 { color: #007bff; margin: 0 0 8px; }
+.student-card p { font-size: 14px; color: #555; margin: 5px 0; }
+
+.card-buttons { display: flex; justify-content: space-between; margin-top: 10px; }
+.edit-btn { background-color: #28a745; color: white; padding: 6px 12px; border-radius: 6px; font-size: 13px; cursor: pointer; }
+.edit-btn:hover { background-color: #1f7a33; }
+.delete-btn { background-color: #dc3545; color: white; padding: 6px 12px; border-radius: 6px; font-size: 13px; cursor: pointer; }
+.delete-btn:hover { background-color: #a71d2a; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  #filter-container, #form-container { flex-direction: column; align-items: center; }
+  input, select, #form-container button { width: 100%; }
+}
+
+/* Dark Mode */
+body.dark-mode { background-color: #1e293b; color: #f1f5f9; }
+body.dark-mode #filter-container, 
+body.dark-mode #form-container, 
+body.dark-mode .student-card {
+  background-color: #334155; 
+  color: #f1f5f9; 
+  border-color: #475569;
+}
+body.dark-mode .student-card h3,
+body.dark-mode .student-card p { color: #f1f5f9; }
+body.dark-mode input, body.dark-mode select { background-color: #475569; color: #f1f5f9; border-color: #64748b; }
+body.dark-mode input::placeholder, body.dark-mode select::placeholder { color: #cbd5e1; }
+body.dark-mode #form-container button { background-color: #3b82f6; color: #f1f5f9; }
+body.dark-mode #form-container button:hover { background-color: #2563eb; }
+body.dark-mode .edit-btn { background-color: #22c55e; }
+body.dark-mode .edit-btn:hover { background-color: #16a34a; }
+body.dark-mode .delete-btn { background-color: #ef4444; }
+body.dark-mode .delete-btn:hover { background-color: #b91c1c; }
+

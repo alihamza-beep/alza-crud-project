@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<link rel="icon" type="image/x-icon" href="./../assets/imgs/logo.png">
+  <title>ALZA&nbsp;HMZA</title>
+  <!-- Bootstrap & Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header with Main Navbar -->
+  <header>
+    <nav class="navbar bg-white border-bottom py-3">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <a class="navbar-brand fw-bold mx-3 text-center" style="font-family: 'Times New Roman', serif; letter-spacing: 4px; font-size: 32px; color: #000;">
+          ALZA HMZA
+        </a>
+        <form class="d-flex mx-auto position-relative" style="width: 40%;">
+          <input class="form-control border rounded px-4" type="search" placeholder="Search for products">
+          <button class="btn position-absolute border-0 bg-transparent" style="right:10px; top:50%; transform:translateY(-50%);">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+        <div class="d-flex align-items-center me-3">
+          <a href="./../src/pages/signin/login.html" class="text-dark me-3 fs-5"><i class="bi bi-person"></i></a>
+          <button id="themeToggle" class="mode-toggle"><i id="themeIcon" class="bi bi-moon"></i></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Secondary Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-top border-bottom py-2">
+      <div class="container justify-content-center">
+        <ul class="navbar-nav text-uppercase fw-semibold" style="font-size: 13px; letter-spacing: 1px;">
+          <li class="nav-item mx-3"><a class="nav-link text-danger" href="./../index.html">Home</a></li>
+          <li class="nav-item mx-3"><a class="nav-link text-dark" href="#">New In</a></li>
+          <li class="nav-item mx-3"><a class="nav-link text-dark" href="#">Rozmara Winter Vol. I</a></li>
+          <li class="nav-item mx-3"><a class="nav-link text-dark" href="./../src/pages/about/about.html">About</a></li>
+          <li class="nav-item mx-3"><a class="nav-link text-dark" href="./crud_project/index.html">Crud</a></li>
+          <li class="nav-item mx-3"><a class="nav-link text-dark" href="#">Rozmara RTW</a></li>
+          <li class="nav-item mx-3"><a class="nav-link text-dark" href="#">Kids</a></li>
+          <li class="nav-item mx-3"><a class="nav-link text-dark" href="./../src/pages/contact/contact.html">Contacts</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-4">
+    <h1 class="text-center mb-4">Students CRUD Project</h1>
+
+    <!-- Filters -->
+    <section id="filter-container" class="mb-4">
+      <input type="text" id="search" placeholder="Search by Name">
+      <select id="ageFilter">
+        <option value="">All Ages</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+      </select>
+      <select id="courseFilter">
+        <option value="">All Courses</option>
+        <option value="Web Development">Web Development</option>
+        <option value="AI & ML">AI & ML</option>
+        <option value="Data Science">Data Science</option>
+      </select>
+    </section>
+
+    <!-- Add Student Form -->
+    <section id="form-container" class="mb-4">
+      <input type="text" id="name" placeholder="Name">
+      <input type="number" id="age" placeholder="Age">
+      <input type="text" id="course" placeholder="Course">
+      <button type="button" onclick="addStudent()">Add Student</button>
+    </section>
+
+    <!-- Student Cards -->
+    <section id="student-container" class="grid"></section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-light mt-5">
+    &copy; 2025 ALZA HMZA. All Rights Reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

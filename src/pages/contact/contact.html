@@ -22,7 +22,10 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./src/css/styles.css">
-
+<link rel="icon" type="image/x-icon" href="./../../../assets/imgs/logo.png">
+  <script type="module" src="./../../../utils/themeUtils.js"></script>
+  <script type="module" src="./../home/home.js"></script>
+  
   <title>Contact Us | ALZA HMZA</title>
 </head>
 
@@ -51,10 +54,10 @@
       <!-- Icons -->
       <div class="d-flex align-items-center me-3">
         <a href="./../signin/signup.html" class="text-dark me-3 fs-5"><i class="bi bi-person"></i></a>
-        <a href="#" class="text-dark fs-5 position-relative">
-          <i class="bi bi-bag"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
-        </a>
+              <!-- Light/Dark Mode Toggle Button -->
+<button id="themeToggle" class="mode-toggle">
+  <i id="themeIcon" class="bi bi-moon"></i> <!-- default: moon -->
+</button>
       </div>
 
     </div>
@@ -68,7 +71,7 @@
         <li class="nav-item mx-3"><a class="nav-link text-dark" href="#">New In</a></li>
         <li class="nav-item mx-3"><a class="nav-link text-dark" href="#">Rozmara Winter Vol. I</a></li>
         <li class="nav-item mx-3"><a class="nav-link text-dark" href="../about/about.html">About</a></li>
-        <li class="nav-item mx-3"><a class="nav-link text-dark" href="#">Luxury Pret</a></li>
+        <li class="nav-item mx-3"><a class="nav-link text-dark" href="./../../../crud_project/index.html">Crued</a></li>
         <li class="nav-item mx-3"><a class="nav-link text-dark" href="#">Rozmara RTW</a></li>
         <li class="nav-item mx-3"><a class="nav-link text-dark" href="#">Kids</a></li>
         <li class="nav-item mx-3"><a class="nav-link text-dark" href="./contact.html">Contact</a></li>
@@ -77,6 +80,34 @@
   </nav>
 
   <style>
+    
+  /* Toggle Button Base Style */
+  .mode-toggle {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-size: 1.8rem;
+    transition: transform 0.4s ease, color 0.3s ease;
+  }
+
+  /* Hover Animation */
+  .mode-toggle:hover {
+    transform: rotate(25deg) scale(1.1);
+  }
+
+  /* Smooth Theme Transition */
+  body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  /* Icon Colors */
+ 
+  .bi-sun {
+    color: #f7c948; /* Golden for sun */
+    text-shadow: 0 0 8px #f1c40f;
+  }
+
+
     .nav-link {
       transition: color 0.2s ease;
     }
